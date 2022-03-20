@@ -8,10 +8,6 @@ const rateSelected = document.getElementById("rate-selected");
 
 let selectActive = false;
 
-let res = "";
-
-console.log(res);
-
 const selectRate = ()=>{
         for(let i=0; i<numberRate.length;i++){
             numberRate[i].addEventListener("click",()=>{
@@ -36,8 +32,6 @@ const selectRate = ()=>{
         }
         
 }
-
-
 
 const submitFeedback = ()=>{
     buttonSubmit.addEventListener("click",()=>{
