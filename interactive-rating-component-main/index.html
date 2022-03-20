@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Rating state start -->
+
+  <div class="container">
+
+    <div class="state-start">
+      <img class="star" src="./images/icon-star.svg" alt="icono de estrella">
+
+      <h1>How did we do?</h1>
+  
+      <p class="text-container"> Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+  
+      <div class="rate">
+        <p class="number-rate hover" value="1">1</p>
+        <p class="number-rate hover" value="2">2</p>
+        <p class="number-rate hover" value="3">3</p>
+        <p class="number-rate hover" value="4">4</p>
+        <p class="number-rate hover" value="5">5</p>
+      </div>
+  
+      <button class="button-submit">Submit</button>
+    </div>
+ 
+    <div class="state-end">
+      <img src="./images/illustration-thank-you.svg" alt="imagen de telefono">
+      <p class="msg-selected">You selected <span id="rate-selected"></span> out of 5</p>
+      <h2>Thank you!</h2>
+      <p class="text-state-end">We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+    </div>
+
+  </div>
+
+  
+
+  
+  <script src="./app.js"></script>
+</body>
+</html>
