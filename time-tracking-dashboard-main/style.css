@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Very-dark-blue);
+    font-family: 'Rubik',sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile First */
+
+.profile_pict{
+    width: 50px;
+    border: 3px solid white;
+    border-radius: 100%;
+}
+
+.user{
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--Dark-blue);
+    min-width: 270px;
+    max-width: 350px;
+    border-radius: 15px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.select_time{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+    font-weight: 300;
+    color: var(--Pale-Blue);
+}
+
+.select_time p:hover{
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.select_time_active{
+    color: white;
+    font-weight: 400;
+}
+
+.data_user{
+    display: flex;
+    gap: 0.7em;
+    align-items: center;
+    justify-content: center;
+    min-width: 270px;
+    background-color: var(--Blue);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    /* margin: 0 auto; */
+    height: 120px;
+}
+
+.name_user p{
+    font-size: 0.7rem;
+    font-weight: 300;
+}
+
+.name_user h2{
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.main_cards{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.card{
+    /* background-color: var(--Dark-blue); */
+    border-radius: 15px;
+    max-width: 350px;
+    min-width: 270px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.background_card{
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    /* justify-content: flex-end; */
+    z-index: 0;
+    border-radius: 15px 15px 0 0;
+}
+    
+
+.background_card img{
+    width: 60px;
+    height: 60px;
+    margin-left: auto; 
+    margin-right: 10px;
+    
+}
+.back_1{
+    background-color: var(--Light-red-work);
+}
+.back_2{
+    background-color: var(--Soft-blue-play);
+}
+.back_3{
+    background-color: var(--Light-red-study);
+}
+.back_4{
+    background-color: var(--Lime-green-exercise);
+}
+.back_5{
+    background-color: var(--Violet-social);
+}
+.back_6{
+    background-color: var(--Soft-orange-self-care);
+}
+
+.info_card{
+   height:90px;
+   border-radius: 15px;
+   background-color: var(--Dark-blue);
+   position: relative;
+   bottom: 12px;
+   padding: 20px;
+}
+
+.tittle_card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tittle_card img{
+    /* width: 10px; */
+    height: 5px;
+}
+
+.time_card{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+}
+
+.time_card h2{
+    font-weight: 300;
+}
+
+.previus_card{
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--Pale-Blue);
+}
+
+.last_card{
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width:1160px){
+    
+    body{
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container{
+        display: flex;
+    }
+
+    .user{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column: 1;
+        grid-row: 1/2;
+        margin: 0;
+        height: 445px;
+        align-items: flex-start;
+    }
+
+    .main_cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        margin-left: 20px;
+
+    }
+
+    .data_user{
+        height: 330px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .profile_pict{
+       width: 70px;
+       margin-bottom: 20px;
+    }
+
+    .data_user p{
+        font-size: 1rem;
+    }
+
+    .data_user h2{
+        font-size: 2rem;
+        width: 70%;
+        margin-top: 10px;
+    }
+
+    .info_card{
+        height: 170px;
+    }
+
+    .select_time{
+        flex-direction: column;
+        gap: 0.5em;
+        margin-left: 30px;
+    }
+
+    .time_card{
+        flex-direction: column;
+    }
+
+    .time_card h2{
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .tittle_card{
+        font-size: 1.4rem
+    }
+    .time_card p{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .info_card:hover{
+        cursor: pointer;
+        animation: iluminacion 1s forwards;
+    }
+
+    @keyframes iluminacion {
+        0% {filter: brightness(1)}
+        100%{filter: brightness(1.5)}
+    }
+}
