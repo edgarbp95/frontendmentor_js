@@ -198,8 +198,15 @@ h1{
   }
 
   @media only screen and (max-width:500px){
+
+    body{
+        height: 100vh;
+    }
+
       .grid_container{
           width: 300px;
+          height: 450px;
+          grid-template-rows: 1fr 1fr 0.8fr 0.4fr 0.5fr;
           
       }
 
