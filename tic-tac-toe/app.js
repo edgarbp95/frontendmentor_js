@@ -79,13 +79,11 @@ function jugadaAzar(min, max) {
     } else{
         document.getElementById("ganador").innerHTML = `<h2 id="ganador">Ha ganado la <span class="turnoO_grande">${letra}</span></h2>`
     }
-    
   }
 
   //El jugador de X juega primero
   let turnoX = true;
   let contador = 0;
-
 
   //Funcion para recorrer los array de patrones ganadores y verficar coincidencia
   const chequearGanador = ()=>{
@@ -184,7 +182,6 @@ function jugadaAzar(min, max) {
 
   }
 
-
   const hacerJugada = (pos)=>{
     btnRef[pos].innerHTML = "O";
     btnRef[pos].classList.add("turnoO")
@@ -192,11 +189,6 @@ function jugadaAzar(min, max) {
     turnoX = true;
     
   }
-
-  //Funcion que recorre patrones para hacer la jugada mas adecuada
-  const jugadaCPU = ()=>{
-
-}
 
 //Boton para empezar nueva partida, se encuentra en POP UP que se abre al ganar.
 botonNueva.addEventListener("click",()=>{
@@ -248,8 +240,6 @@ const modoMultiplayer = ()=>{
       }
 }
 
-
-
 const modoCPU = ()=>{
     modoDeJuego = "CPU";
     CPU.classList.add("boton_encendido");
@@ -276,7 +266,6 @@ const modoCPU = ()=>{
             
             }
            
-   
            //Si el contador es 9, declaramos empate. (El maximo de jugadas que puede haber sin ganar es 9.)
            if(contador==9){
                //Llamamos a la funcion de empate, que bloquea la mesa.
@@ -286,13 +275,7 @@ const modoCPU = ()=>{
            //chequemos si hay ganador en cada click
            chequearGanador();
        })
-   
-    
-       
    })
-
-   
-
    }
 }
 
