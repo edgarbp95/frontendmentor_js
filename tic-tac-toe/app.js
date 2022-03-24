@@ -186,7 +186,9 @@ function jugadaAzar(min, max) {
 
   const hacerJugada = (pos)=>{
     btnRef[pos].innerHTML = "O";
+    btnRef[pos].classList.add("turnoO")
     turnoX = true;
+    
   }
 
   //Funcion que recorre patrones para hacer la jugada mas adecuada
