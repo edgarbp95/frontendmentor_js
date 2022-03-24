@@ -253,7 +253,7 @@ const modoCPU = ()=>{
        element.addEventListener("click",()=>{
            if(turnoX){
                //Juega la X
-               element.innerText = "X";
+               element.innerHTML = "X";
                turnoX = false;
                element.disabled = true;
                element.classList.add("turnoX")
