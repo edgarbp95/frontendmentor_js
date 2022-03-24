@@ -59,6 +59,7 @@ function jugadaAzar(min, max) {
       contador = 0;
       turnoX = true;
       activarBotones();
+      location.reload();
   })
 
   //Funcion que se ejecuta al haber empate. Cambia el color y aparece mensaje de que empate
@@ -187,6 +188,7 @@ function jugadaAzar(min, max) {
   const hacerJugada = (pos)=>{
     btnRef[pos].innerHTML = "O";
     btnRef[pos].classList.add("turnoO")
+    btnRef[pos].disabled = true;
     turnoX = true;
     
   }
@@ -205,11 +207,11 @@ botonNueva.addEventListener("click",()=>{
 
 })
 
-//Cuando el jugador selecciona Multiplayer
-multiplayer.addEventListener("click",()=>{
+const modoMultiplayer = ()=>{
     modoDeJuego = "multiplayer";
     multiplayer.classList.add("boton_encendido");
     CPU.classList.remove("boton_encendido");
+    CPU.removeEventListener("click",modoCPU);
     
     if(modoDeJuego==="multiplayer"){
         //Evento de click a todos los cuadrados del tablero.
@@ -244,13 +246,16 @@ multiplayer.addEventListener("click",()=>{
       
       })
       }
-})
+}
 
-//Cuando el jugador selecciona CPU
-CPU.addEventListener("click",()=>{
+
+
+const modoCPU = ()=>{
     modoDeJuego = "CPU";
     CPU.classList.add("boton_encendido");
     multiplayer.classList.remove("boton_encendido");
+    CPU.removeEventListener("click",modoCPU);
+    multiplayer.removeEventListener("click",modoMultiplayer);
 
     if (modoDeJuego==="CPU"){
         //Evento de click a todos los cuadrados del tablero.
@@ -289,4 +294,10 @@ CPU.addEventListener("click",()=>{
    
 
    }
-})
+}
+
+//Cuando el jugador selecciona CPU
+CPU.addEventListener("click",modoCPU);
+
+//Cuando el jugador selecciona Multiplayer
+multiplayer.addEventListener("click",modoMultiplayer);
