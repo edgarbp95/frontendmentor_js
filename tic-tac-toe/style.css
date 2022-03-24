@@ -54,6 +54,13 @@ h1{
 .panel_button{
     display: flex;
     gap: 1em;
+    margin: 0 auto;
+}
+
+.boton_encendido{
+    background-color: var(--Orange);
+    color: var(--White);
+    font-weight: 500;
 }
 
 .panel_button button{
