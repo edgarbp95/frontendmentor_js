@@ -110,8 +110,77 @@ function jugadaAzar(min, max) {
         }
   }
 
+  const jugarGanar = ()=>{
+    if(btnRef[0].innerText == "O" && btnRef[1].innerText == "O" && btnRef[2].innerText != "X" || btnRef[1].innerText == "O" && btnRef[2].innerText == "O" && btnRef[0].innerText != "X" || btnRef[0].innerText == "O" && btnRef[2].innerText == "O" && btnRef[1].innerText != "X"){
+        if(btnRef[0].innerHTML==" "){
+            hacerJugada(0);
+        } else if(btnRef[1].innerHTML==" "){
+            hacerJugada(1);
+        } else if(btnRef[2].innerHTML==" "){
+            hacerJugada(2);
+        }
+    } else if (btnRef[0].innerText == "O" && btnRef[3].innerText == "O" && btnRef[6].innerText != "X"|| btnRef[0].innerText == "O" && btnRef[6].innerText == "O" && btnRef[3].innerText != "X" || btnRef[3].innerText == "O" && btnRef[6].innerText == "O" && btnRef[0].innerText != "X"){
+        if(btnRef[0].innerHTML==" "){
+            hacerJugada(0);
+        } else if(btnRef[3].innerHTML==" "){
+            hacerJugada(3);
+        } else if(btnRef[6].innerHTML==" "){
+            hacerJugada(6);
+        }
+    } else if (btnRef[2].innerText == "O" && btnRef[5].innerText == "O" && btnRef[8].innerText != "X" || btnRef[2].innerText == "O" && btnRef[8].innerText == "O" && btnRef[5].innerText != "X" || btnRef[5].innerText == "O" && btnRef[8].innerText == "O" && btnRef[2].innerText != "X"){
+        if(btnRef[2].innerHTML==" "){
+            hacerJugada(2);
+        } else if(btnRef[5].innerHTML==" "){
+            hacerJugada(5);
+        } else if(btnRef[8].innerHTML==" "){
+            hacerJugada(8);
+        }
+    } else if (btnRef[6].innerText == "O" && btnRef[7].innerText == "O" && btnRef[8].innerText != "X" || btnRef[6].innerText == "O" && btnRef[8].innerText == "O" && btnRef[7].innerText != "X"|| btnRef[7].innerText == "O" && btnRef[8].innerText == "O" && btnRef[6].innerText != "X"){
+        if(btnRef[6].innerHTML==" "){
+            hacerJugada(6);
+        } else if(btnRef[7].innerHTML==" "){
+            hacerJugada(7);
+        } else if(btnRef[8].innerHTML==" "){
+            hacerJugada(8);
+        }
+    } else if (btnRef[3].innerText == "O" && btnRef[4].innerText == "O" && btnRef[5].innerText != "X"|| btnRef[3].innerText == "O" && btnRef[5].innerText == "O" && btnRef[4].innerText != "X"|| btnRef[4].innerText == "O" && btnRef[5].innerText == "O" && btnRef[3].innerText != "X"){
+        if(btnRef[3].innerHTML==" "){
+            hacerJugada(3);
+        } else if(btnRef[4].innerHTML==" "){
+            hacerJugada(4);
+        } else if(btnRef[5].innerHTML==" "){
+            hacerJugada(5);
+        }
+    } else if (btnRef[1].innerText == "O" && btnRef[4].innerText == "O" && btnRef[7].innerText != "X"|| btnRef[1].innerText == "O" && btnRef[7].innerText == "O" && btnRef[4].innerText != "X" || btnRef[4].innerText == "O" && btnRef[7].innerText == "O" && btnRef[1].innerText != "X"){
+        if(btnRef[1].innerHTML==" "){
+            hacerJugada(1);
+        } else if(btnRef[4].innerHTML==" "){
+            hacerJugada(4);
+        } else if(btnRef[7].innerHTML==" "){
+            hacerJugada(7);
+        }
+    } else if (btnRef[0].innerText == "O" && btnRef[4].innerText == "O" && btnRef[8].innerText != "X" || btnRef[0].innerText == "O" && btnRef[8].innerText == "O" && btnRef[4].innerText != "X" || btnRef[4].innerText == "O" && btnRef[8].innerText == "O" && btnRef[0].innerText != "X"){
+        if(btnRef[0].innerHTML==" "){
+            hacerJugada(0);
+        } else if(btnRef[4].innerHTML==" "){
+            hacerJugada(4);
+        } else if(btnRef[8].innerHTML==" "){
+            hacerJugada(8);
+        }
+    } else if (btnRef[2].innerText == "O" && btnRef[4].innerText == "O" && btnRef[6].innerText != "X"|| btnRef[2].innerText == "O" && btnRef[6].innerText == "O" && btnRef[4].innerText != "X" || btnRef[4].innerText == "O" && btnRef[6].innerText == "O" && btnRef[2].innerText != "X"){
+        if(btnRef[2].innerHTML==" "){
+            hacerJugada(2);
+        } else if(btnRef[4].innerHTML==" "){
+            hacerJugada(4);
+        } else if(btnRef[6].innerHTML==" "){
+            hacerJugada(6);
+        }
+    }
+
+  }
 
   const jugadaInteligente = ()=>{
+      jugarGanar();
     if(btnRef[0].innerText == "X" && btnRef[1].innerText == "X" && btnRef[2].innerText != "O" || btnRef[1].innerText == "X" && btnRef[2].innerText == "X" && btnRef[0].innerText != "O" || btnRef[0].innerText == "X" && btnRef[2].innerText == "X" && btnRef[1].innerText != "O"){
         if(btnRef[0].innerHTML==" "){
             hacerJugada(0);
